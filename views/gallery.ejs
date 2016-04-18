@@ -1,0 +1,20 @@
+<% include partials/head.ejs %>
+    <body id="<%= pagename %>">
+        <div class="wrap group">
+            <% include partials/header.ejs %>
+
+            <ul id="catchPhotos">
+                <% gallerypics.forEach(function(item) { %>
+                    <li>
+                        <img src="<%= item.images[0].source %>" class="tocrop" />
+                        <% if ( item.name ) { %>
+                            <p><%= item.name %></p>
+                        <% } %>
+                    </li>
+                <% }); %>
+            </ul>
+
+        </div><!-- wrap group -->
+        <% include partials/footer.ejs %>
+    </body>
+</html>

@@ -1,0 +1,630 @@
+$sans: 'Ubuntu', serif;
+$serif: 'Bitter', sans-serif;
+$cream: #f2f2d8;
+$red: #dc4e3c;
+$redlight: #de5746;
+$darkblue: #2e3a4d;
+$skyblue: #62a5f7;
+
+body {
+    font-family: $sans;
+}
+
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: transparent;
+}
+
+.group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.wrap {
+    width: 100%;
+    background: #fff;
+}
+
+.wrap2 {
+    padding: 0 6.25%;
+    margin: 30px 0;
+}
+
+header {
+    background: url('../images/header_bg.jpg');
+    padding: 20px 6.25% 30px;
+}
+
+#logo {
+    display: block;
+    width: 60%;
+    max-width: 190px;
+    float: left;
+    line-height: 1;
+    svg {
+        display: block;
+        > g {
+            fill: $skyblue;
+            transition: all 0.4s ease;
+        }
+    }
+}
+
+#logo:hover svg > g {
+    fill: #fff;
+}
+
+#navToggle {
+    width: 32px;
+    float: right;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#navLinks {
+    clear: both;
+    list-style: none;
+    padding: 50px 0 0;
+    text-transform: uppercase;
+    display: none;
+    a {
+        color: #fff;
+        transition: color 0.4s ease;
+        &:hover {
+            color: $red;
+        }
+        &:hover svg path {
+            fill: #fff;
+        }
+    }
+    li {
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        padding: 15px 0;
+    }
+    li:first-child {
+        padding-top: 0;
+    }
+    li:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+#pageLakes #navLinks a.navLakes { color: $red; cursor: default; }
+#pageGallery #navLinks a.navGallery { color: $red; cursor: default; }
+#pageFacilities #navLinks a.navFacilities { color: $red; cursor: default; }
+#pagePackage #navLinks a.navPackage { color: $red; cursor: default; }
+#pageRules #navLinks a.navRules { color: $red; cursor: default; }
+#pageContact #navLinks a.navContact { color: $red; cursor: default; }
+
+#pageLakes #navLinks a.navLakes svg path { fill: #fff; cursor: default; }
+#pageGallery #navLinks a.navGallery svg path { fill: #fff; cursor: default; }
+#pageFacilities #navLinks a.navFacilities svg path { fill: #fff; cursor: default; }
+#pagePackage #navLinks a.navPackage svg path { fill: #fff; cursor: default; }
+#pageRules #navLinks a.navRules svg path { fill: #fff; cursor: default; }
+#pageContact #navLinks a.navContact svg path { fill: #fff; cursor: default; }
+
+#navLinks.visible {
+    display: block;
+}
+
+#navLinks svg {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+    path {
+        fill: $skyblue;
+        transition: all 0.4s ease;
+    }
+}
+
+h1 {
+    font-family: $serif;
+    color: $cream;
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0 30px;
+    font-style: italic;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.button {
+    border-radius: 2px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+}
+
+.buttonBooking {
+    background: $red;
+    background: linear-gradient(to bottom, $redlight 0%, $redlight 49%, $red 50%, $red 100%);
+    color: #fff;
+    display: block;
+    margin: 20px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5), inset 0 1px 0 0 rgba(255, 255, 255, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+.innerWrap {
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+}
+
+.innerIntro {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h2 {
+        font-size: 28px;
+        text-align: center;
+        line-height: 1.2;
+        margin: 0 0 30px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+#indexGallery {
+    display: block;
+    margin-bottom: 0;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    p {
+        padding: 30px 0;
+        text-align: center;
+        color: $darkblue;
+    }
+}
+
+#copyright {
+    text-align: center;
+    span {
+        display: block;
+        color: $darkblue;
+        font-size: 14px;
+    }
+}
+
+.pageIntro {
+    margin: 30px 0;
+    font-size: 18px;
+    a {
+        color: $red;
+    }
+}
+
+#lakeMap {
+    background: $darkblue;
+    padding: 30px 0;
+    svg {
+        max-width: 100%;
+    }
+}
+
+.pageMain {
+    margin-top: 30px;
+    a {
+        color: $red;
+    }
+}
+
+.peg {
+    margin-top: 30px;
+    img {
+        max-width: 100%;
+        height: auto;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border: 1px solid $darkblue;
+        border-bottom: none;
+    }
+    p {
+        background: $darkblue;
+        color: #fff;
+        padding: 5px 0;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: 1px solid $darkblue;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    }
+}
+
+#catchPhotos {
+    list-style: none;
+    li {
+        width: 50%;
+        float: left;
+        position: relative;
+        &:before {
+            display: block;
+            content: " ";
+            width: 100%;
+            padding-top: 75%;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        p {
+            display: none;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.innerSubtitle {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 24px;
+    margin-top: 30px;
+    background: $darkblue;
+    color: $skyblue;
+    display: inline;
+    padding: 8px 20px;
+    line-height: 1;
+}
+
+.pageSub {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 24px;
+    margin-top: 30px;
+    color: $darkblue;
+}
+
+.innerSection {
+    padding: 120px 0 30px;
+    margin-top: 40px;
+}
+
+.facilitiesServices {
+    background: url('../images/facilities_header_services.jpg') no-repeat;
+    background-size: cover;
+}
+
+.facilitiesCabin {
+    background: url('../images/facilities_header_cabin.jpg') no-repeat;
+    background-size: cover;
+}
+
+.facilitiesBait {
+    background: url('../images/facilities_header_bait.jpg') no-repeat;
+    background-size: cover;
+}
+
+.facilitiesTackle {
+    background: url('../images/facilities_header_tackle.jpg') no-repeat;
+    background-size: cover;
+}
+
+.innerList {
+    list-style-position: inside;
+    color: $red;
+    font-size: 18px;
+    span {
+        color: $darkblue;
+    }
+}
+
+#contact_form {
+    margin: 20px 0 40px;
+}
+
+#contact_form input, #contact_form textarea {
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, .08);
+    background: rgba(0, 0, 0, .03);
+    margin-top: 10px;
+    font-size: 14px;
+    -webkit-appearance: none;
+
+}
+
+#contact_form input.buttonSend {
+    background: $red;
+    background: linear-gradient(to bottom, $redlight 0%, $redlight 49%, $red 50%, $red 100%);
+    color: #fff;
+    display: block;
+    margin: 20px 0;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+#booking_form input, #booking_form textarea {
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, .08);
+    background: rgba(0, 0, 0, .03);
+    margin-top: 10px;
+    font-size: 14px;
+    -webkit-appearance: none;
+}
+
+#booking_form section {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 30px 0;
+}
+
+#booking_form textarea {
+    min-height: 200px;
+}
+
+#booking_form input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    width: auto;
+    display: inline;
+    &:last-child {
+        margin-left: 20px;
+    }
+}
+
+#booking_form input.buttonSend {
+    background: $red;
+    background: linear-gradient(to bottom, $redlight 0%, $redlight 49%, $red 50%, $red 100%);
+    color: #fff;
+    display: block;
+    margin: 20px 0;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.form_space {
+    margin-bottom: 20px;
+}
+
+#booking_boatno {
+    margin-bottom: 30px;
+}
+
+#booking_balance {
+    margin-bottom: 30px;
+}
+
+h5 {
+    margin-bottom: 10px;
+}
+
+#bookTerms {
+    font-size: 12px;
+}
+
+.detailImages {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+
+    html {
+        background: url('../images/body_bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .wrap {
+        width: 87.5%;
+        max-width: 1200px;
+        margin: 80px auto 50px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+    }
+
+    .wrap2 {
+        margin-bottom: 80px;
+    }
+
+    header {
+        padding: 40px 50px;
+    }
+
+    #logo {
+        max-width: 250px;
+    }
+
+    #navToggle {
+        display: none;
+    }
+
+    #navLinks {
+        clear: none;
+        float: right;
+        padding: 0;
+        display: block;
+        margin-top: 25px;
+        li {
+            border-bottom: none;
+            padding: 0;
+            float: left;
+            margin-right: 30px;
+        }
+        li:last-child  {
+            margin-right: 0;
+        }
+    }
+
+    h1 {
+        font-size: 60px;
+        margin: 100px 0 50px;
+        line-height: 1.5;
+        span {
+            display: block;
+        }
+    }
+
+    .buttonBooking {
+        max-width: 240px;
+        margin: 30px auto;
+    }
+
+    .innerWrap {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .innerIntro {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        p {
+            font-size: 28px;
+        }
+    }
+
+    #indexGallery {
+        img {
+            width: 100%;
+        }
+        p {
+            font-size: 22px;
+        }
+    }
+
+    #copyright {
+        color: #fff;
+        font-size: 18px;
+        span {
+            margin-top: 5px;
+            color: $cream;
+            font-size: 16px;
+        }
+    }
+
+    .innerPage {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .pageIntro {
+        margin: 50px 0;
+        font-size: 24px;
+    }
+
+    .pageMain {
+        font-size: 20px;
+    }
+
+    #lakeMap {
+        padding: 60px 0;
+        svg {
+            max-width: 70%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .peg {
+        width: 47.5%;
+        float: left;
+        margin-bottom: 20px;
+        &:nth-child(2n) {
+            float: right;
+        }
+        p {
+            font-size: 18px;
+            padding: 10px 0;
+        }
+    }
+
+    #catchPhotos {
+        li {
+            width: 25%;
+            p {
+                display: block;
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+                text-align: center;
+                background: rgba(0, 0, 0, .7);
+                color: #fff;
+                padding: 10px;
+                line-height: 1.3;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .innerSection {
+        padding: 450px 0 50px;
+    }
+
+    .innerSubtitle, .pageSub {
+        font-size: 28px;
+    }
+
+    .innerList {
+        font-size: 20px;
+    }
+
+    #contact_form {
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    #contact_form input, #contact_form textarea {
+        font-size: 18px;
+    }
+
+    #contact_form textarea {
+        min-height: 250px;
+    }
+
+    #contact_form input.buttonSend {
+        max-width: 200px;
+        margin: 30px auto 0;
+    }
+
+    #bookTerms {
+        font-size: 14px;
+    }
+
+    #navLinks svg {
+        height: 18px;
+        width: 18px;
+        margin-right: 5px;
+    }
+
+    .detailImages {
+        display: block;
+        margin: 30px 0 50px;
+        img {
+            float: left;
+            width: 32%;
+            margin-right: 2%;
+            border: 3px solid $darkblue;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+}

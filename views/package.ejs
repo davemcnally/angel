@@ -1,0 +1,27 @@
+<% include partials/head.ejs %>
+    <body id="<%= pagename %>">
+        <div class="wrap group">
+            <% include partials/header.ejs %>
+
+            <div class="innerWrap innerPage">
+                <p class="pageIntro">Our current prices are: <% include partials/lakeprice.ejs %> per person, per week for an angler and <% include partials/nonprice.ejs %> per person, per week for a non-angler. Non-anglers enjoy all of the same benefits of angling guests besides the fishing itself — perfect for bringing family members or non-fishing friends along with you! Your package includes all of the following:</p>
+
+                <ul class="innerList">
+                    <li><span>A Week's Fishing</span></li>
+                    <li><span>Tackle Hire</span></li>
+                    <li><span>Breakfast &amp; Evening Meals</span></li>
+                    <li><span>Free Tea And Coffee</span></li>
+                    <li><span>Sky TV with Sports Package</span></li>
+                    <li><span>Transfers To &amp; From Limoges Airport</span></li>
+                    <li><span>Full Use Of Our Facilities!</span></li>
+                </ul>
+
+                <p class="pageMain">Tackle and equipment hire is included in the price but please remember: This doesn’t include your terminal tackle. You’ll want to bring that, along with your sleeping bag with you. You can always purchase more terminal tackle at the lake shop if you need it. Remember you can purchase high quality baits on site too so you don’t need extra luggage to bring along your own. It also doesn’t cover the hire of bait boats — Those are <% include partials/boatprice.ejs %> per person, per week.</p>
+                <p class="pageMain">You can now also spread your payments across monthly amounts too, helping you to cover the costs without paying out lump sums in one go. If you’d like to take advantage of this, just <a href="/contact" title="Contact Us">contact us</a> and let us know. Take a look at our <a href="/rules" title="Rules And Terms">rules and terms</a> page for full terms and conditions related to your booking and your holiday.</p>
+                <p class="pageMain">We recommend <a href="http://ryanair.com" title="Ryanair">Ryanair</a> for booking your flights. They fly to Limoges from Bristol, East Midlands, Leeds Bradford, Liverpool &amp; London Stansted. Please check the <a href="http://ryanair.com" title="Ryanair">Ryanair</a> website for flight details from your nearest airport. The cost and process of booking flights is your responsibility, flight information should be provided to us prior to your trip for the benefit of transfers.</p>
+            </div><!-- //innerWrap -->
+
+        </div><!-- wrap group -->
+        <% include partials/footer.ejs %>
+    </body>
+</html>

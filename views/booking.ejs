@@ -1,0 +1,70 @@
+<% include partials/head.ejs %>
+    <body id="<%= pagename %>">
+        <div class="wrap group">
+            <% include partials/header.ejs %>
+
+            <div class="innerWrap innerPage">
+            <p class="pageIntro">We are now taking bookings for the 2016 season at <% include partials/lakeprice.ejs %> per person. This is our confirmation booking form. Please <a href="/contact" title="Contact Us">contact us</a> prior to sending any payments as availability and dates need confirming for your booking. If you would prefer, you can <a href="/form.pdf" title="Our Print Booking Form">save and print this form</a> then send it to us.</p>
+
+            <form id="booking_form" class="group" action="http://formspree.io/angellakesfishing@gmail.com" method="POST">
+                <section>
+                    <h5>Contact Information</h5>
+                    <input type="text" id="booking_name" name="booking_name" placeholder="What's your name?" />
+                    <input type="text" id="booking_email" name="_replyto" placeholder="What's your email address?" />
+                    <textarea id="booking_address" name="booking_address" placeholder="Your Address"></textarea>
+                    <input type="text" id="booking_daytime" name="booking_daytime" placeholder="Daytime phone number" />
+                    <input type="text" id="booking_evening" name="booking_evening" placeholder="Evening phone number" />
+                </section>
+
+                <section>
+                    <h5>Payment Information</h5>
+                    <div class="group">
+                        <p>Do you wish to hire a bait boat?</p>
+                        <p>Bait boats are <% include partials/boatprice.ejs %>/week and must be booked in advance. Hire cost to be paid upon arrival.</p>
+                        <input type="checkbox" id="booking_boatyes" name="booking_boatyes" value="Yes" />Yes
+                        <input type="checkbox" id="booking_boatno" name="booking_boatno" value="No" />No
+                    </div>
+                    <p>The total balance of your holiday must be received no later than eight weeks before your departure date (if not received by this date, we reserve the right to cancel the booking). Bookings made within eight weeks of the departure date require payment in full along with the booking form. See our site for current prices.</p>
+                    <input type="text" id="booking_total" name="booking_total" placeholder="Total Cost" />
+                    <input type="text" id="booking_deposit" name="booking_deposit" placeholder="Deposit" />
+                    <input type="text" id="booking_balance" name="booking_balance" placeholder="Balance" />
+                    <p>N.B. Flights are not included. For cheap air travel, try Ryanair at ryanair.com. Payments by cheque should be made payable to Paul Ward and sent to the following address:</p>
+                    <p class="form_space">Angel Lakes, 33 Wellington St, Hertford, Hertfordshire, SG14 3AN</p>
+                    <p>To pay directly into our bank account, payments should be addressed to Mr P W Ward and sent to the following details:</p>
+                    <p>Bank: Barclays, Sort Code: 20-20-37, Account Number: 33799239</p>
+                </section>
+
+                <section>
+                    <h5>Booking Details</h5>
+                    <input type="text" id="booking_details_arrival" name="booking_details_arrival" placeholder="Arrival Date" />
+                    <input type="text" id="booking_details_flyfrom" name="booking_details_flyfrom" placeholder="Airport Flying From" />
+                    <input type="text" id="booking_details_flightnum" name="booking_details_flightnum" placeholder="Flight Number" />
+                    <input type="text" id="booking_details_depdate" name="booking_details_depdate" placeholder="Departure Date" />
+                    <input type="text" id="booking_details_fishnum" name="booking_details_fishnum" placeholder="Number Of Fishing Guests" />
+                    <input type="text" id="booking_details_nonfishnum" name="booking_details_nonfishnum" placeholder="Non Fishing Guests" />
+                    <textarea id="booking_guestnames" name="booking_guestnames" placeholder="Names Of Guests"></textarea>
+                </section>
+
+                <section>
+                    <h5>Acceptance Information</h5>
+                    <p>On behalf of the named guests, I declare that I agree to accept the terms and conditions of the booking as stated.</p>
+                    <input type="text" id="booking_signame" name="booking_signame" placeholder="Your Name" />
+                    <input type="text" id="booking_sigdate" name="booking_sigdate" placeholder="Date Of Declaration" />
+                </section>
+
+                <section>
+                    <h5>Terms &amp; Conditions</h5>
+                    <p id="bookTerms">Holiday will be reserved when completed booking form and deposit are received (must be received within five days of initial booking). Bookings remain provisional until this time. The booking is taken as being confirmed when we have forwarded an invoice to the party organiser. If you cancel a confirmed booking, you may be subject to cancellation fees — see website for details. We accept no responsibility for problems with travel arrangements, including delays and flight cancellations. It is your responsibility to make sure you have the correct and up to date travel documents. We will not be held liable for loss or delay occasioned by any of the following: Political unrest, Riots, Port closures, Airport Terminal Closures, Strikes, Industrial Disputes, War (or threat of), Terrorist Activity, Technical/Weather Problems With Transportation, Fire, Flood, Acts Of God, or any other events beyond our control. If any changes to the confirmed booking are required, we will try to be flexible where possible. Children under 16 are welcome, if accompanied by an adult. We reserve the right to terminate your holiday if you are causing harm or disturbance to others, grounds, property or lakes. You will not be liable for a refund any may incur costs for damages. Holiday deposits are taken on the understanding that these terms have been read and accepted. On arrival at Angel Lakes, we require a <% include partials/tackleprice.ejs %> deposit on the hired tackle. Providing all tackle is returned at the end of the holiday in good working condition, the monies will be refunded.</p>
+                </section>
+
+                <input type="hidden" name="_next" value="{{ url('bookingformthanks') }}" />
+                <input type="hidden" name="_subject" value="Angel Lakes Booking Confirmation Form" />
+                <input type="text" name="_gotcha" style="display:none" />
+                <input type="submit" id="form_submit" class="button buttonSend" name="form_submit" value="Submit Form" />
+            </form>
+        </div><!-- //innerWrap -->
+
+        </div><!-- wrap group -->
+        <% include partials/footer.ejs %>
+    </body>
+</html>

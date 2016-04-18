@@ -1,0 +1,30 @@
+{
+  "name": "angel-lakes",
+  "version": "1.0.0",
+  "description": "Express fork of the Angel Lakes design.",
+  "main": "app.js",
+  "author": "Dave McNally",
+  "private": "true",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-imageoptim": "^1.4.1",
+    "grunt-sass": "^1.1.0",
+    "grunt-svgmin": "^3.2.0",
+    "load-grunt-tasks": "^3.5.0"
+  },
+  "dependencies": {
+    "cron": "^1.1.0",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "fbgraph": "^1.1.0",
+    "forcedomain": "^0.6.0",
+    "request": "^2.72.0"
+  }
+}
