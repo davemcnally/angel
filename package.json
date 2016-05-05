@@ -19,6 +19,7 @@
     "load-grunt-tasks": "^3.5.0"
   },
   "dependencies": {
+    "body-parser": "^1.15.0",
     "cron": "^1.1.0",
     "dotenv": "^2.0.0",
     "ejs": "^2.4.1",
@@ -26,6 +27,7 @@
     "fbgraph": "^1.1.0",
     "forcedomain": "^0.6.0",
     "nodemailer": "^2.3.2",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "request": "^2.72.0"
   }
 }

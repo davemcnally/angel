@@ -6,13 +6,10 @@
             <div class="innerWrap innerPage">
             <p class="pageIntro">Before you fill in your booking form, please get in touch to check availability. If you have questions or general enquiries, we'd love to hear from you and will do our best to help! You can fill in this form or you can also give us a call on <a href="tel:07966298430" title="Call Us">07966298430</a></p>
 
-            <form id="contact_form" class="group" action="http://formspree.io/angellakesfishing@gmail.com" method="POST">
+            <form id="contact_form" class="group" action="/contact" method="post">
                 <input type="text" id="form_name" name="form_name" placeholder="What's your name?" />
-                <input type="text" id="form_email" name="_replyto" placeholder="What's your email address?" />
+                <input type="text" id="form_email" name="form_email" placeholder="What's your email address?" />
                 <textarea id="form_message" name="form_message" placeholder="How can we help?"></textarea>
-                <input type="hidden" name="_next" value="{{ url('contactpagethanks') }}" />
-                <input type="hidden" name="_subject" value="Angel Lakes Contact Form" />
-                <input type="text" name="_gotcha" style="display:none" />
                 <input type="submit" id="form_submit" class="button buttonSend" name="form_submit" value="Send Message" />
             </form>
         </div><!-- //innerWrap -->

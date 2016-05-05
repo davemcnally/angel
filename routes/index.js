@@ -20,10 +20,6 @@ exports.rules = function(req, res) {
     res.render('rules', {title: 'Rules', pagename: 'pageRules'});
 }
 
-exports.contact = function(req, res) {
-    res.render('contact', {title: 'Contact', pagename: 'pageContact'});
-}
-
 exports.booking = function(req, res) {
     res.render('booking', {title: 'Booking', pagename: 'pageBooking'});
 }
@@ -32,5 +28,5 @@ exports.bookingformthanks = function(req, res) {
 }
 
 exports.contactpagethanks = function(req, res) {
-    res.render('contactpagethanks', {title: 'Booking', pagename: 'pageHome'});
+    res.render('contactpagethanks', {title: 'Contact', pagename: 'pageHome'});
 }

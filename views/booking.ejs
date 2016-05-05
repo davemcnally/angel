@@ -6,11 +6,11 @@
             <div class="innerWrap innerPage">
             <p class="pageIntro">We are now taking bookings for the 2016 season at <% include partials/lakeprice.ejs %> per person. This is our confirmation booking form. Please <a href="/contact" title="Contact Us">contact us</a> prior to sending any payments as availability and dates need confirming for your booking. If you would prefer, you can <a href="/form.pdf" title="Our Print Booking Form">save and print this form</a> then send it to us. Please do not bring your own baits with you as you will not be able to use them. We monitor the quality of baits going into the lake and like to make sure our fish are getting only the best of what they need.</p>
 
-            <form id="booking_form" class="group" action="http://formspree.io/angellakesfishing@gmail.com" method="POST">
+            <form id="booking_form" class="group" action="/booking" method="post">
                 <section>
                     <h5>Contact Information</h5>
                     <input type="text" id="booking_name" name="booking_name" placeholder="What's your name?" />
-                    <input type="text" id="booking_email" name="_replyto" placeholder="What's your email address?" />
+                    <input type="text" id="booking_email" name="booking_email" placeholder="What's your email address?" />
                     <textarea id="booking_address" name="booking_address" placeholder="Your Address"></textarea>
                     <input type="text" id="booking_daytime" name="booking_daytime" placeholder="Daytime phone number" />
                     <input type="text" id="booking_evening" name="booking_evening" placeholder="Evening phone number" />
@@ -56,10 +56,6 @@
                     <h5>Terms &amp; Conditions</h5>
                     <p id="bookTerms">Holiday will be reserved when completed booking form and deposit are received (must be received within five days of initial booking). Bookings remain provisional until this time. The booking is taken as being confirmed when we have forwarded an invoice to the party organiser. If you cancel a confirmed booking, you may be subject to cancellation fees — see website for details. We accept no responsibility for problems with travel arrangements, including delays and flight cancellations. It is your responsibility to make sure you have the correct and up to date travel documents. We will not be held liable for loss or delay occasioned by any of the following: Political unrest, Riots, Port closures, Airport Terminal Closures, Strikes, Industrial Disputes, War (or threat of), Terrorist Activity, Technical/Weather Problems With Transportation, Fire, Flood, Acts Of God, or any other events beyond our control. If any changes to the confirmed booking are required, we will try to be flexible where possible. Children under 16 are welcome, if accompanied by an adult. We reserve the right to terminate your holiday if you are causing harm or disturbance to others, grounds, property or lakes. You will not be liable for a refund any may incur costs for damages. Holiday deposits are taken on the understanding that these terms have been read and accepted. On arrival at Angel Lakes, we require a <% include partials/tackleprice.ejs %> deposit on the hired tackle. Providing all tackle is returned at the end of the holiday in good working condition, the monies will be refunded.</p>
                 </section>
-
-                <input type="hidden" name="_next" value="{{ url('bookingformthanks') }}" />
-                <input type="hidden" name="_subject" value="Angel Lakes Booking Confirmation Form" />
-                <input type="text" name="_gotcha" style="display:none" />
                 <input type="submit" id="form_submit" class="button buttonSend" name="form_submit" value="Submit Form" />
             </form>
         </div><!-- //innerWrap -->
