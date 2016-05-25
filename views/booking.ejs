@@ -9,11 +9,20 @@
             <form id="booking_form" class="group" action="/booking" method="post">
                 <section>
                     <h5>Contact Information</h5>
-                    <input type="text" id="booking_name" name="booking_name" placeholder="What's your name?" />
-                    <input type="text" id="booking_email" name="booking_email" placeholder="What's your email address?" />
-                    <textarea id="booking_address" name="booking_address" placeholder="Your Address"></textarea>
-                    <input type="text" id="booking_daytime" name="booking_daytime" placeholder="Daytime phone number" />
-                    <input type="text" id="booking_evening" name="booking_evening" placeholder="Evening phone number" />
+                    <label for="booking_name">What's your name?</label>
+                    <input type="text" id="booking_name" name="booking_name" placeholder="John Doe" />
+
+                    <label for="booking_email">What's your email address?</label>
+                    <input type="text" id="booking_email" name="booking_email" placeholder="name@email.com" />
+
+                    <label for="booking_address">Your Address</label>
+                    <textarea id="booking_address" name="booking_address" placeholder="Full postal address"></textarea>
+
+                    <label for="booking_daytime">Daytime Phone Number</label>
+                    <input type="text" id="booking_daytime" name="booking_daytime" placeholder="Full number, including area code" />
+
+                    <label for="booking_evening">Evening Phone Number</label>
+                    <input type="text" id="booking_evening" name="booking_evening" placeholder="Full number, including area code" />
                 </section>
 
                 <section>
@@ -24,10 +33,16 @@
                         <input type="checkbox" id="booking_boatyes" name="booking_boatyes" value="Yes" />Yes
                         <input type="checkbox" id="booking_boatno" name="booking_boatno" value="No" />No
                     </div>
-                    <p>The total balance of your holiday must be received no later than eight weeks before your departure date (if not received by this date, we reserve the right to cancel the booking). Bookings made within eight weeks of the departure date require payment in full along with the booking form. See our site for current prices.</p>
-                    <input type="text" id="booking_total" name="booking_total" placeholder="Total Cost" />
-                    <input type="text" id="booking_deposit" name="booking_deposit" placeholder="Deposit" />
-                    <input type="text" id="booking_balance" name="booking_balance" placeholder="Balance" />
+                    <p class="format_section">The total balance of your holiday must be received no later than eight weeks before your departure date (if not received by this date, we reserve the right to cancel the booking). Bookings made within eight weeks of the departure date require payment in full along with the booking form. See our site for current prices.</p>
+
+                    <label for="booking_total">Total Cost</label>
+                    <input type="text" id="booking_total" name="booking_total" placeholder="Total cost of your booking in GBP (£)" />
+
+                    <label for="booking_deposit">Deposit</label>
+                    <input type="text" id="booking_deposit" name="booking_deposit" placeholder="Deposit amount being paid in GBP (£)" />
+
+                    <label for="booking_balance">Balance</label>
+                    <input type="text" id="booking_balance" name="booking_balance" placeholder="Balance remaining in GBP (£)" />
                     <p>N.B. Flights are not included. For cheap air travel, try Ryanair at ryanair.com. Payments by cheque should be made payable to Paul Ward and sent to the following address:</p>
                     <p class="form_space">Angel Lakes, 33 Wellington St, Hertford, Hertfordshire, SG14 3AN</p>
                     <p>To pay directly into our bank account, payments should be addressed to Mr P W Ward and sent to the following details:</p>
@@ -36,20 +51,38 @@
 
                 <section>
                     <h5>Booking Details</h5>
-                    <input type="text" id="booking_details_arrival" name="booking_details_arrival" placeholder="Arrival Date" />
-                    <input type="text" id="booking_details_flyfrom" name="booking_details_flyfrom" placeholder="Airport Flying From" />
-                    <input type="text" id="booking_details_flightnum" name="booking_details_flightnum" placeholder="Flight Number" />
-                    <input type="text" id="booking_details_depdate" name="booking_details_depdate" placeholder="Departure Date" />
-                    <input type="text" id="booking_details_fishnum" name="booking_details_fishnum" placeholder="Number Of Fishing Guests" />
-                    <input type="text" id="booking_details_nonfishnum" name="booking_details_nonfishnum" placeholder="Non Fishing Guests" />
-                    <textarea id="booking_guestnames" name="booking_guestnames" placeholder="Names Of Guests"></textarea>
+
+                    <label for="booking_details_arrival">Arrival Date</label>
+                    <input type="text" id="booking_details_arrival" name="booking_details_arrival" placeholder="Date your flight arrives" />
+
+                    <label for="booking_details_flyfrom">Airport Flying From</label>
+                    <input type="text" id="booking_details_flyfrom" name="booking_details_flyfrom" placeholder="Which airport you are flying from" />
+
+                    <label for="booking_details_flightnum">Flight Number</label>
+                    <input type="text" id="booking_details_flightnum" name="booking_details_flightnum" placeholder="The flight number you'll be arriving on" />
+
+                    <label for="booking_details_depdate">Departure Date</label>
+                    <input type="text" id="booking_details_depdate" name="booking_details_depdate" placeholder="Date of your departure" />
+
+                    <label for="booking_details_fishnum">Number Of Fishing Guests</label>
+                    <input type="text" id="booking_details_fishnum" name="booking_details_fishnum" placeholder="How many fishing guests are coming?" />
+
+                    <label for="booking_details_nonfishnum">Non Fishing Guests</label>
+                    <input type="text" id="booking_details_nonfishnum" name="booking_details_nonfishnum" placeholder="How many non-fishing guests are coming?" />
+
+                    <label for="booking_guestnames">Names Of Guests</label>
+                    <textarea id="booking_guestnames" name="booking_guestnames" placeholder="Full names of all guests"></textarea>
                 </section>
 
                 <section>
                     <h5>Acceptance Information</h5>
-                    <p>On behalf of the named guests, I declare that I agree to accept the terms and conditions of the booking as stated.</p>
-                    <input type="text" id="booking_signame" name="booking_signame" placeholder="Your Name" />
-                    <input type="text" id="booking_sigdate" name="booking_sigdate" placeholder="Date Of Declaration" />
+                    <p class="format_section">On behalf of the named guests, I declare that I agree to accept the terms and conditions of the booking as stated.</p>
+
+                    <label for="booking_signame">Your Name</label>
+                    <input type="text" id="booking_signame" name="booking_signame" placeholder="John Doe" />
+
+                    <label for="booking_sigdate">Date Of Declaration</label>
+                    <input type="text" id="booking_sigdate" name="booking_sigdate" placeholder="Today's date" />
                 </section>
 
                 <section>

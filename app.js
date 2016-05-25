@@ -69,9 +69,9 @@ app.post('/contact', function(req, res) {
         },
         to: process.env.ANGEL_EMAIL,
         subject: 'Angel Lakes Contact Form',
-        html: '<b>Name: </b> ' + req.body.form_name + '</br>' +
-            '<b>Email: </b> ' + req.body.form_email + '</br>' +
-            '<b>Message: </b> ' + req.body.form_message + '</br>'
+        html: '<p><b>Name: </b> ' + req.body.form_name + '</p>' +
+            '<p><b>Email: </b> ' + req.body.form_email + '</p>' +
+            '<p><b>Message: </b> ' + req.body.form_message + '</p>'
     };
     mailer.sendMail(mailOpts, function (error, response) {
         if (error) {
@@ -92,7 +92,7 @@ app.post('/booking', function(req, res) {
         }
     }
     var mailer = nodemailer.createTransport(sgTransport(options));
-    
+
     var boatYes = req.body.booking_boatyes;
     var boatNo = req.body.booking_boatno;
     if ( boatYes === "Yes" && boatNo === undefined ) {
@@ -100,7 +100,7 @@ app.post('/booking', function(req, res) {
     } else {
         var boatOrder = "No, bait boat not needed.";
     }
-    
+
     bookingOpts = {
         from: {
             name: req.body.booking_name,
@@ -108,24 +108,31 @@ app.post('/booking', function(req, res) {
         },
         to: process.env.ANGEL_EMAIL,
         subject: 'Angel Lakes Booking Form',
-        html: '<b>Name: </b> ' + req.body.booking_name + '</br>' + 
-            '<b>Email: </b> ' + req.body.booking_email + '</br>' + 
-            '<b>Address: </b> ' + req.body.booking_address + '</br>' + 
-            '<b>Daytime Number: </b> ' + req.body.booking_daytime + '</br>' + 
-            '<b>Evening Number: </b> ' + req.body.booking_evening + '</br></br></br>' + 
-            '<b>Bait Boat: </b> ' + boatOrder + '</br>' + 
-            '<b>Total Cost: </b> ' + req.body.booking_total + '</br>' + 
-            '<b>Deposit Amount: </b> ' + req.body.booking_deposit + '</br>' + 
-            '<b>Balance: </b> ' + req.body.booking_balance + '</br></br></br>' + 
-            '<b>Arrival Date: </b> ' + req.body.booking_details_arrival + '</br>' + 
-            '<b>Flying From: </b> ' + req.body.booking_details_flyfrom + '</br>' + 
-            '<b>Flight Number: </b> ' + req.body.booking_details_flightnum + '</br>' + 
-            '<b>Departure Gate: </b> ' + req.body.booking_details_depdate + '</br>' + 
-            '<b>Number Of Fishing Guests: </b> ' + req.body.booking_details_fishnum + '</br>' + 
-            '<b>Non Fishing Guests: </b> ' + req.body.booking_details_nonfishnum + '</br>' + 
-            '<b>Names Of Guests: </b> ' + req.body.booking_guestnames + '</br></br></br>' + 
-            '<b>Your Name: </b> ' + req.body.booking_signame + '</br>' + 
-            '<b>Date Of Declaration: </b> ' + req.body.booking_sigdate + '</br>' 
+        html: '<h3>Contact Information</h3>' +
+            '<p><b>Name: </b> ' + req.body.booking_name + '</p>' +
+            '<p><b>Email: </b> ' + req.body.booking_email + '</p>' +
+            '<p><b>Address: </b> ' + req.body.booking_address + '</p>' +
+            '<p><b>Daytime Number: </b> ' + req.body.booking_daytime + '</p>' +
+            '<p><b>Evening Number: </b> ' + req.body.booking_evening + '</p>' +
+            '<br /><hr><br />' +
+            '<h3>Payment Information</h3>' +
+            '<p><b>Bait Boat: </b> ' + boatOrder + '</p>' +
+            '<p><b>Total Cost: </b> ' + req.body.booking_total + '</p>' +
+            '<p><b>Deposit Amount: </b> ' + req.body.booking_deposit + '</p>' +
+            '<p><b>Balance: </b> ' + req.body.booking_balance + '</p>' +
+            '<br /><hr><br />' +
+            '<h3>Booking Details</h3>' +
+            '<p><b>Arrival Date: </b> ' + req.body.booking_details_arrival + '</p>' +
+            '<p><b>Flying From: </b> ' + req.body.booking_details_flyfrom + '</p>' +
+            '<p><b>Flight Number: </b> ' + req.body.booking_details_flightnum + '</p>' +
+            '<p><b>Departure Gate: </b> ' + req.body.booking_details_depdate + '</p>' +
+            '<p><b>Number Of Fishing Guests: </b> ' + req.body.booking_details_fishnum + '</p>' +
+            '<p><b>Non Fishing Guests: </b> ' + req.body.booking_details_nonfishnum + '</p>' +
+            '<p><b>Names Of Guests: </b> ' + req.body.booking_guestnames + '</p>' +
+            '<br /><hr><br />' +
+            '<h3>Acceptance Information</h3>' +
+            '<p><b>Your Name: </b> ' + req.body.booking_signame + '</p>' +
+            '<p><b>Date Of Declaration: </b> ' + req.body.booking_sigdate + '</p>'
     };
     mailer.sendMail(bookingOpts, function (error, response) {
         if (error) {
