@@ -296,7 +296,8 @@ h1 {
 }
 
 .facilitiesCabin {
-    background: url('../images/facilities_header_cabin.jpg') no-repeat;
+    //background: url('../images/facilities_header_cabin.jpg') no-repeat;
+    background: $darkblue;
     background-size: cover;
 }
 
