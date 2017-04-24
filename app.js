@@ -150,6 +150,8 @@ app.get('*', function(req, res) {
     res.send('404 Cannot Find That Content.');
 });
 
+// app.listen(80, process.env.DROPLET_IP, function()
+// app.listen(localhost, function()
 var server = app.listen(80, process.env.DROPLET_IP, function() {
     console.log('Listening on: ' + process.env.DROPLET_IP);
 });
