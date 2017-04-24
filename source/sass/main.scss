@@ -59,19 +59,12 @@ header {
     fill: #fff;
 }
 
-#navToggle {
-    width: 32px;
-    float: right;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
 #navLinks {
     clear: both;
     list-style: none;
     padding: 50px 0 0;
     text-transform: uppercase;
-    display: none;
+    display: block;
     a {
         color: #fff;
         transition: color 0.4s ease;
@@ -458,10 +451,6 @@ h5 {
 
     #logo {
         max-width: 250px;
-    }
-
-    #navToggle {
-        display: none;
     }
 
     #navLinks {

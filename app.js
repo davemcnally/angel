@@ -151,7 +151,7 @@ app.get('*', function(req, res) {
 });
 
 // app.listen(80, process.env.DROPLET_IP, function()
-// app.listen(localhost, function()
+// app.listen(3000, function()
 var server = app.listen(80, process.env.DROPLET_IP, function() {
     console.log('Listening on: ' + process.env.DROPLET_IP);
 });
